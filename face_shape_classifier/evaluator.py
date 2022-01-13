@@ -7,7 +7,7 @@ class FaceShapeEvaluator():
         self.model_path = model_path
         self.model = tf.keras.models.load_model(self.model_path)
 
-    def evluate(self, test_data):
+    def evaluate(self, test_data):
         test_image = image.load_img(test_data, target_size = (200,200))
         #test_image = image.img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis=0)
