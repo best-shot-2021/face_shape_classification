@@ -12,7 +12,7 @@ import tensorflow as tf
 
 class FaceShapeTrainer():
     def __init__(self, model_name, batch_size, num_of_epoch) -> None:
-        self.moel_name = model_name
+        self.model_name = model_name
         self.batch_size = batch_size
         self.num_of_epoch = num_of_epoch
 
@@ -74,4 +74,4 @@ class FaceShapeTrainer():
                 epochs=self.num_of_epoch,
                 verbose=1)
 
-        model.save('model_ver2.h5')
+        model.save(self.model_name)
